@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+    
+{% comment %}
+{{ object_list }}
+{% endcomment %}
+<b></b>
+
+{% for tweet in tweets %}
+
+{{ tweet.screen_name }}<br>
+
+{% endfor %}
+    
+
+<p><h3>
+
+    {% for object in object_list %}
+
+    <a href="/screen_name/{{ object.handle }}/">{{ object.screen_name }}</a>
+    
+
+    {% endfor %}
+</p></h3>
+{% endblock body %}
